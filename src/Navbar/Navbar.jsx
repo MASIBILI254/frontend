@@ -4,7 +4,7 @@ import logo from '../images/oti.jpeg';
 
 function Navbar() {
   const links = [
-    { name: "Home", path: "/home" },
+    { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
     { name: "Our Courses", path: "/courses" },
     { name: "Contact", path: "/contactUs" },

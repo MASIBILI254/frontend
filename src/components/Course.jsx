@@ -44,7 +44,7 @@ function Course() {
     <Navbar />
     <div className="min-h-screen bg-primary px-1/2 py-4">
       
-      <h1 className="text-3xl font-bold text-center mb-8">Available Courses</h1>
+      <h1 className="text-3xl font-bold text-center mb-8 text-white">Available Courses</h1>
 
       {courses.length === 0 ? (
         <p className="text-center text-gray-500">No courses available</p>
@@ -55,12 +55,18 @@ function Course() {
               key={course.id}
               className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition"
             >
-              <h2 className="text-xl font-semibold mb-2">{course.title}</h2>
+              <h2 className="text-xl font-semibold mb-2">{course.CourseName}</h2>
               <p className="text-gray-600 text-sm mb-4">
-                {course.objectives || "No objectives provided"}
+                {course.TotalDuration || "No duration provided"}
+              </p>
+              <p className="text-gray-600 text-sm mb-4">
+                {course.Fee || "No fees provided"}
+              </p>
+              <p className="text-gray-600 text-sm mb-4">
+                {course.Project || "No project provided"}
               </p>
               <button
-                onClick={() => navigate(`/info/${course.id}`)}
+                onClick={() => navigate(`/info/${course.CourseId}`)}
                 className="text-blue-600 hover:underline font-medium"
               >
                 Read more...

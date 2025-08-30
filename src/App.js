@@ -6,6 +6,7 @@ import Navbar from './Navbar/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './components/Contact';
+import RegisterStudent from './pages/RegisterStudent';
 
 
 
@@ -14,13 +15,13 @@ function App() {
   return (
     <Router>
       <Routes>
-          <Route path="/" element={<Navbar />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/nav" element={<Navbar />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
          <Route path='/contactUs' element={<Contact />} />
-      
+        <Route path="/register" element={<RegisterStudent />} />
         <Route path="/courses" element={<Course />} />
-         <Route path="/info/:id" element={<CourseInfo />} />
+         <Route path="/info/:CourseId" element={<CourseInfo />} />
         
 
       </Routes>
