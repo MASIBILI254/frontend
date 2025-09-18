@@ -4,17 +4,19 @@ import Footer from './Footer'
 import team from '../images/team.jpg'
 function About() {
   return (
-    <><section className="container mx-auto px-1/2 py-4 bg-primary">
-      <Navbar />
+    <>
+    <Navbar />
+    <section className="container mx-auto px-1/2 py-4 bg-primary">
+      
       {/* Heading */}
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
         About Our Institute
       </h2>
 
       {/* Content Grid */}
       <div className="grid md:grid-cols-2 gap-8 items-center">
         {/* Left Content */}
-        <div className="text-gray-700 space-y-6 leading-relaxed">
+        <div className="text-white  leading-relaxed">
           <p>
             Oval Training Institute is dedicated to providing high-quality,
             practical education that prepares students for the challenges of the
@@ -30,8 +32,8 @@ function About() {
 
         {/* Right Content (Team Placeholder) */}
         <div className=" flex items-center justify-center h-64 rounded-lg shadow">
-          <h3 className="text-2xl font-semibold text-gray-600"> Our Team</h3>
-          <img src={team} alt="team image" className='w-100 h-100 mt-8' />
+          <h3 className="text-2xl font-semibold text-white"> Our Team
+          <img src={team} alt="team image" className='w-100 h-100 mt-8' /></h3>
         </div>
       </div>
 

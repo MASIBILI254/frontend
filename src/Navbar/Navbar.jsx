@@ -1,14 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from '../images/oti.jpeg';
-
+import { useNavigate } from "react-router-dom";
 function Navbar() {
+  const Navigate = useNavigate();
   const links = [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
     { name: "Our Courses", path: "/courses" },
     { name: "Contact", path: "/contactUs" },
   ];
+  // handle Add Course button click
+  const handleAddCourse = () => {
+    Navigate("/addCourse")
+  }
 
   return (
     <header className="bg-white shadow">
@@ -34,6 +39,7 @@ function Navbar() {
               {link.name}
             </Link>
           ))}
+          <button className="bg-blue-600 text-white h-10 w-38 rounded-full" onClick={handleAddCourse}>Add Course</button>
         </nav>
       </div>
     </header>

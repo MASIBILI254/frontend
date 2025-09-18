@@ -4,11 +4,11 @@ import Hero from '../components/Hero'
 import Footer from './Footer'
 function Home() {
   return (
-    <div className='container  px-1/2 py-4 bg-primary'>
-        <Navbar />
-        <Hero/>
-        <Footer/>
-    </div>
+    <><div className="min-h-screen flex flex-col">
+      <Navbar />
+      <Hero />
+
+    </div><Footer /></>
   )
 }
 

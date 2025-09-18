@@ -49,21 +49,18 @@ function Course() {
       {courses.length === 0 ? (
         <p className="text-center text-gray-500">No courses available</p>
       ) : (
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 text-center ml-2">
           {courses.map((course) => (
             <div
               key={course.id}
               className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition"
             >
               <h2 className="text-xl font-semibold mb-2">{course.CourseName}</h2>
-              <p className="text-gray-600 text-sm mb-4">
-                {course.TotalDuration || "No duration provided"}
+              <p className="text-gray-600 text-bold mb-4">
+               Duration: {course.TotalDuration} weeks
               </p>
-              <p className="text-gray-600 text-sm mb-4">
-                {course.Fee || "No fees provided"}
-              </p>
-              <p className="text-gray-600 text-sm mb-4">
-                {course.Project || "No project provided"}
+              <p className="text-gray-600 text-bold mb-4">
+                ksh.{course.Fee}
               </p>
               <button
                 onClick={() => navigate(`/info/${course.CourseId}`)}

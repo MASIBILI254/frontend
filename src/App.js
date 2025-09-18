@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './components/Contact';
 import RegisterStudent from './pages/RegisterStudent';
+import AddCourseForm from './components/AddCourse';
 
 
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/register" element={<RegisterStudent />} />
         <Route path="/courses" element={<Course />} />
          <Route path="/info/:CourseId" element={<CourseInfo />} />
+          <Route path="/addCourse" element={<AddCourseForm />} />
         
 
       </Routes>

@@ -28,15 +28,7 @@ function RegisterStudent() {
       const studentId = response.data.studentId; // backend should return insertId as studentId
       setMessage("Student registered successfully!");
 
-      // auto-enroll student
-      if (courseId && studentId) {
-        const enrollRes = await api.post("/student/enroll", {
-          studentId,
-          courseId,
-        });
-        console.log("Enroll response:", enrollRes.data);
-        setMessage("enrolled successfully!");
-      }
+      
 
       // Step 3: Redirect after short delay
       setTimeout(() => {
@@ -59,7 +51,7 @@ function RegisterStudent() {
         className="bg-white p-6 rounded-2xl shadow-md w-full max-w-md"
       >
         <h2 className="text-2xl font-bold mb-4 text-center">
-          Register Student
+          Register To This Course
         </h2>
 
         <input
@@ -79,6 +71,16 @@ function RegisterStudent() {
           placeholder="Enter email"
           required
           className="w-full p-2 mb-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
+
+          <input
+          type="number"
+          name="Pnumber"
+          value={formData.Pnumber}
+          onChange={handleChange}
+          placeholder="Enter phone Number"
+          required
+          className="w-full p-2 mb-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
+
 
         <button
           type="submit"
