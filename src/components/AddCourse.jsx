@@ -70,7 +70,7 @@ export default function AddCourseForm() {
      <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-2xl p-6 mt-6">
           <h2 className="text-2xl font-bold mb-4">Add New Course</h2>
           <form onSubmit={handleSubmit} className="space-y-4">
-              {/* Course Info */}
+              {/* Course Info*/}
               <input
                   type="text"
                   name="CourseName"
